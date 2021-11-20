@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "50569ca3-0ad3-4cda-8b60-100a305e9208",
+		"name": "Api.Reactive.SpringWebFlux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8082/talleres",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/talleres",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"talleres"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/talleres/taller-id/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/talleres/taller-id/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"talleres",
+						"taller-id",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/talleres/60a74ee5af1766af40ab8429",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/talleres/60a74ee5af1766af40ab8429",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"talleres",
+						"60a74ee5af1766af40ab8429"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/talleres/by-nombre?tallerNombre=Angular",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/talleres/by-nombre?tallerNombre=Angular",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"talleres",
+						"by-nombre"
+					],
+					"query": [
+						{
+							"key": "tallerNombre",
+							"value": "Angular"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

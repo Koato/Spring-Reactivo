@@ -1,0 +1,17 @@
+https://programmer.help/blogs/webflux-rest-api-global-exception-handling-error-handling.html
+https://developer.okta.com/blog/2018/09/24/reactive-apis-with-spring-webflux
+
+
+@FunctionalInterface
+public interface CurrencyMapper {
+
+    void demo();
+
+    Function<CurrencyExchange, CurrencyExchangeDto> toApi = (CurrencyExchange entity) ->
+            CurrencyExchangeDto
+                    .builder()
+                    .currencyOrigin(CurrencyCode.valueOf(entity.getCurrencyExchangeOrigin()))
+                    .currencyDestination(CurrencyCode.valueOf(entity.getCurrencyExchangeDestination()))
+                    .amount(entity.getAmountExchangeRate())
+                    .build();
+.map(toApi);
