@@ -2,6 +2,9 @@ package pe.edu.galaxy.training.java.api.reactive.webflux;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.reactive.config.CorsRegistry;
+import org.springframework.web.reactive.config.WebFluxConfigurer;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Contact;
 import io.swagger.v3.oas.annotations.info.Info;
@@ -22,5 +25,16 @@ public class Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
+	
+	/*
+	 * //@Bean public WebFluxConfigurer corsConfigurer() { return new
+	 * WebFluxConfigurer() {
+	 * 
+	 * @Override public void addCorsMappings(CorsRegistry registry) {
+	 * registry.addMapping("/**") .allowCredentials(true)
+	 * .allowedHeaders("Authorization", "Cache-Control", "Content-Type")
+	 * .allowedMethods("HEAD", "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
+	 * .allowedOrigins("*"); //.allowedOrigins("http://localhost:3000"); } }; }
+	 */
 
 }

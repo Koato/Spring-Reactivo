@@ -10,16 +10,17 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pe.edu.galaxy.training.java</groupId>
-	<artifactId>api.reactive.webflux.funtions.relations.swagger</artifactId>
+	<artifactId>api.reactive.webflux.funtions.security.v3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api.reactive.webflux.functions</name>
 	<description>Demo project for Spring Boot</description>
-	
+
 	<properties>
 		<java.version>11</java.version>
 		<springdoc.openapi>1.4.3</springdoc.openapi>
+		<jsonwebtoken.version>0.9.1</jsonwebtoken.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -42,6 +43,8 @@
 			<optional>true</optional>
 		</dependency>
 
+		<!-- Swagger OpenAPI -->
+
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-webflux-core</artifactId>
@@ -51,6 +54,27 @@
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-webflux-ui</artifactId>
 			<version>${springdoc.openapi}</version>
+		</dependency>
+
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>${jsonwebtoken.version}</version>
+		</dependency>
+		
+		<!-- JAXB RI, Jakarta XML Binding -->
+		
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>3.0.0</version>
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
